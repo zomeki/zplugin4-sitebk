@@ -1,0 +1,11 @@
+.project
+.bundle/
+Gemfile.lock
+log/*.log
+coverage/
+pkg/
+spec/dummy/data/
+spec/dummy/db/*.sqlite3
+spec/dummy/db/*.sqlite3-journal
+spec/dummy/log/*.log
+spec/dummy/tmp/

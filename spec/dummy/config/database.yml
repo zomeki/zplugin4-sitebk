@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: zomeki_development
+  username: zomeki
+  password: zomekipass
+
+test:
+  <<: *default
+  database: zomeki_test
+  username: zomeki
+  password: zomekipass
+
+production:
+  <<: *default
+  database: zomeki_production
+  username: zomeki
+  password: <%= ENV['DUMMY_DATABASE_PASSWORD'] %>
