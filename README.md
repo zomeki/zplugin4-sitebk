@@ -6,16 +6,6 @@ ZOMEKIのデータベースをサイト単位でバックアップするプラ�
 
 * ZOMEKI3 build-70+
 
-## バックアップ対象
-
-バックアップ対象はin_siteスコープが定義済のモデルです。
-
-```ruby
-class Cms::Content < ApplicationRecord
-  scope :in_site, ...
-end
-```
-
 ## インストール
 
 Gemfileに追加します。
@@ -54,6 +44,16 @@ bundle exec rake zomeki:db:site:dump_all
 
 ```bash
 bundle exec rake zomeki:db:site:restore SITE_ID=1
+```
+
+## バックアップ対象
+
+バックアップ対象は`in_site`スコープが定義済のモデルです。
+
+```ruby
+class Cms::Content < ApplicationRecord
+  scope :in_site, ...
+end
 ```
 
 ## License
