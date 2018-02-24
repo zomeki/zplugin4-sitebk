@@ -1,9 +1,9 @@
-module Zomekip
+module Zplugin
   module Sitebk
     class Scanner
       def initialize(site)
         @site = site
-        @models = Zomekip::Sitebk::Loader.target_models
+        @models = Sitebk::Loader.target_models
       end
 
       def scan_ids

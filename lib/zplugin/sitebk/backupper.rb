@@ -1,10 +1,10 @@
-module Zomekip
+module Zplugin
   module Sitebk
     class Backupper
       def initialize(site, dir: Dir.pwd)
         @site = site
         @dir = dir
-        @models = Zomekip::Sitebk::Loader.target_models
+        @models = Sitebk::Loader.target_models
 
         require 'postgres-copy'
         @models.each do |model|
@@ -17,7 +17,7 @@ module Zomekip
       end
 
       def dump
-        id_map = Zomekip::Sitebk::Scanner.new(@site).scan_ids
+        id_map = Sitebk::Scanner.new(@site).scan_ids
 
         unless check_id_map_consistency(id_map)
           raise "invalid model and ids."
@@ -34,7 +34,7 @@ module Zomekip
       end
 
       def restore
-        id_map = Zomekip::Sitebk::Scanner.new(@site).scan_ids
+        id_map = Sitebk::Scanner.new(@site).scan_ids
 
         unless check_id_map_consistency(id_map)
           raise "detect invalid consistency between models and ids."

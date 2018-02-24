@@ -2,9 +2,9 @@ namespace ZomekiCMS::NAME do
   namespace :db do
     namespace :site do
       task :load do
-        require "zomekip/sitebk/loader"
-        require "zomekip/sitebk/scanner"
-        require "zomekip/sitebk/backupper"
+        require "zplugin/sitebk/loader"
+        require "zplugin/sitebk/scanner"
+        require "zplugin/sitebk/backupper"
       end
 
       desc 'Dump site (SITE_ID=int, DIR=path)'
@@ -18,7 +18,7 @@ namespace ZomekiCMS::NAME do
 
         puts "dumping site id: #{site.id}..."
         save_dir = ENV['DIR'] || ENV['HOME'] || Rails.root
-        Zomekip::Sitebk::Backupper.new(site, dir: save_dir).dump do |model, ids, path|
+        Zplugin::Sitebk::Backupper.new(site, dir: save_dir).dump do |model, ids, path|
           puts "#{model.table_name}: #{ids.size} rows to '#{path}'"
         end
         puts "done."
@@ -39,7 +39,7 @@ namespace ZomekiCMS::NAME do
 
         puts "restoring site id: #{site.id}..."
         save_dir = ENV['DIR'] || ENV['HOME'] || Rails.root
-        Zomekip::Sitebk::Backupper.new(site, dir: save_dir).restore do |model, ids, path|
+        Zplugin::Sitebk::Backupper.new(site, dir: save_dir).restore do |model, ids, path|
           puts "#{model.table_name}: #{ids.size} rows from '#{path}'"
         end
         puts "done."

@@ -1,4 +1,4 @@
-describe Zomekip::Sitebk do
+describe Zplugin::Sitebk do
   before do
     ENV["SITE_ID"] = "1"
     ENV["DIR"] = Rails.root.join('data').to_s

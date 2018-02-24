@@ -1,15 +1,15 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "zomekip/sitebk/version"
+require "zplugin/sitebk/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "zomekip3-sitebk"
-  s.version     = Zomekip::Sitebk::VERSION
+  s.name        = "zplugin3-sitebk"
+  s.version     = Zplugin::Sitebk::VERSION
   s.authors     = ["SiteBridge Inc."]
   s.email       = ["info@sitebridge.co.jp"]
-  s.homepage    = "https://github.com/zomeki/zomekip-sitebk"
+  s.homepage    = "https://github.com/zomeki/zplugin3-sitebk"
   s.summary     = "Dump and restore site related tables for zomeki3."
   s.description = "Dump and restore site related tables for zomeki3."
   s.license     = "MIT"

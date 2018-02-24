@@ -1,4 +1,4 @@
-# Zomekip::Sitebk
+# Zplugin::Sitebk
 
 ZOMEKIのデータベースをサイト単位でバックアップするプラグインです。
 
@@ -11,7 +11,7 @@ ZOMEKIのデータベースをサイト単位でバックアップするプラ�
 Gemfileに追加します。
 
 ```ruby
-gem 'zomekip3-sitebk', git: 'https://github.com/zomeki/zomekip3-sitebk.git'
+gem 'zplugin3-sitebk', github: 'zomeki/zplugin3-sitebk'
 ```
 
 以下を実行します。

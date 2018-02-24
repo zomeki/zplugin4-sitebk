@@ -3,7 +3,7 @@ require_relative 'boot'
 require "rails/all"
 
 Bundler.require(*Rails.groups)
-require "zomekip/sitebk"
+require "zplugin/sitebk"
 
 module Dummy
   class Application < Rails::Application

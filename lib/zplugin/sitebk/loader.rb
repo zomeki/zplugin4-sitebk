@@ -1,4 +1,4 @@
-module Zomekip
+module Zplugin
   module Sitebk
     class Loader
       class << self
