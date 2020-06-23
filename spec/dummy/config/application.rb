@@ -10,6 +10,6 @@ module Dummy
   end
 end
 
-module ZomekiCMS
+module Zomeki
   NAME = 'zomeki'
 end

@@ -1,4 +1,4 @@
-namespace ZomekiCMS::NAME do
+namespace Zomeki::NAME do
   namespace :db do
     namespace :site do
       task :load do
