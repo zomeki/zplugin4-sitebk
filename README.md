@@ -4,9 +4,8 @@ ZOMEKIのデータベースをサイト単位でバックアップするプラ�
 
 ## 想定環境
 
-| zplugin3-sitebk | zomeki | joruri | 
+| zplugin-sitebk | zomeki | joruri | 
 | ---- | ---- | ---- |
-| 1.0 | build-70+ | 2017 Release 2+ |
 | 2.0 | -         | 2020 Release 1+ |
 
 ## インストール
@@ -14,7 +13,7 @@ ZOMEKIのデータベースをサイト単位でバックアップするプラ�
 Gemfileに追加します。
 
 ```ruby
-gem 'zplugin3-sitebk', github: 'zomeki/zplugin3-sitebk'
+gem 'zplugin4-sitebk', github: 'zomeki/zplugin4-sitebk'
 ```
 
 以下を実行します。
